@@ -14,7 +14,7 @@ Welcome to the GitHub User Search Web App project! This is a simple web applicat
 ## Usage
 1. Fork and Clone the forked repository:
 ```
-git clone <repository-url>
+git clone https://github.com/your-username/github-user-app.git
 cd github-user-app
 ```
 2. Open index.html in a web browser:
