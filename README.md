@@ -47,7 +47,7 @@ We welcome contributions from the community to improve the GitHub User Search We
 5. Push to the branch: git push origin feature/improvement
 6. Submit a pull request detailing your changes.
    
-Please follow our Code of Conduct and Contribution Guidelines when contributing to this project.
+Please follow our [Code of Conduct](CODE_OF_CONDUCT.md) and Contribution Guidelines when contributing to this project.
 
 ## Development
 To further develop or customize this web app:
