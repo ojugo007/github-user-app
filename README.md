@@ -57,7 +57,7 @@ To further develop or customize this web app:
 - Add additional features or styling as needed in index.html and user/index.html.
   
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 Thank you to GitHub for providing the GitHub API.
