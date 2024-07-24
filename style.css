@@ -1,0 +1,156 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    width: 100vw;
+    height:100vh;
+}
+nav{
+    max-width: 100%;
+    min-height: 70px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    color: #fff;
+}
+nav ul{
+    list-style: none;
+    font-family: "Playwrite CU", cursive;
+}
+header{
+    max-width: 100%;
+    min-height: calc(85vh - 90px);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(162,15,172,0.9668242296918768) 35%, rgba(231,162,242,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 80px 50px 0;
+}
+
+.header-image{
+    flex-basis: 40%;
+    
+}
+.header-image img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.header-text{
+    flex-basis: 60%;
+
+}
+h1{
+    font-size: 85px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #fff;
+    margin: 0;
+}
+.header-text p{
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    padding: 20px 0 10px;
+}
+
+input{
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: grey;
+}
+input:focus{
+    outline: 0;
+}
+button{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    border: none;
+    color: white;
+    background-color: #000;
+    padding: 10px 20px;
+    width: 150px;
+    border-radius: 5px;
+    margin-left: 20px;
+
+}
+section{
+    max-width: 100%;
+    min-height: calc(85vh - 90px);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(162,15,172,0.9668242296918768) 35%, rgba(231,162,242,1) 100%);
+    padding: 80px 100px 0;
+}
+section h1{
+    font-size: 40px;
+    font-weight: 200;
+    padding-bottom: 30px;
+
+}
+section>div{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 200;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    
+
+}
+.btn-git{
+    color: #fff;
+    background-color:#000;
+    margin-left: 35px;
+}
+.btn{
+    background-color: #fff;
+    color:#000;
+}
+.btn-contact{
+   color: #fff;
+}
+section h2{
+    font-size: 38px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: 10px;
+}
+section p{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    padding-bottom: 25px;
+    width: 75%;
+
+}
+section small{
+    color: #fff;
+    font-size: 12px;
+    font-weight: 100;
+}
+section .avatar-wrapper{
+    width: 50%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+section .avatar-wrapper img{
+    width: 100%;
+    height: 100%;
+}

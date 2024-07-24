@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>user</title>
+</head>
+<body>
+    <nav>
+        <img src="/image/oj-logo.png" alt="ojays logo" height="80px" width="80px">
+        <ul>
+            <li>Created by Ojay</li>
+        </ul>
+    </nav>
+    <section id="container">
+        <h1>USER PROFILE</h1>
+        <div id="userData">
+            <!-- content goes here -->
+        </div>
+
+    </section>
+    <script>
+        // retrieve data from URL parameters or storage
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('userName');
+        const data = JSON.parse(urlParams.get('data'));
+
+        document.getElementById('userData').innerHTML = `
+            <div class="avatar-wrapper">
+                <img src="${data.avatar_url}" alt="">
+            </div>
+            <div>
+                <h2>${data.name} </h2>
+                <small>${data.location}</small>
+                <p>${data.bio} </p>
+                <a href= ${data.blog} class="btn">Portfolio</a>
+                <a href="${data.html_url}" class="btn-git">github</a>
+                <a href="mailto:${data.email}" class="btn-contact ">Contact&rarr;</a>
+                
+            </div>
+        `;
+    </script>
+
+
+</body>
+</html>
