@@ -1,11 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+    box-sizing: border-box;
+}
 body {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  font-size: 1rem;
   width: 100vw;
   height: 100vh;
+}
+.responsive-container {
+    display: flex;
+    flex-direction: column;
+    height: -webkit-fill-available; /* fills entire height of body */
 }
 nav {
   max-width: 100%;
@@ -17,9 +25,15 @@ nav {
   background-color: #000;
   color: #fff;
 }
+nav a {
+    padding: 0;
+}
 nav ul {
   list-style: none;
   font-family: "Playwrite CU", cursive;
+}
+nav >  ul > li {
+    font-size: 1rem;
 }
 header {
   max-width: 100%;
@@ -35,10 +49,12 @@ header {
   align-items: center;
   justify-content: center;
   padding: 80px 50px 0;
+  flex: 1;
 }
 
 .header-image {
   flex-basis: 40%;
+  margin-top: -100px;
 }
 .header-image img {
   width: 100%;
@@ -53,9 +69,8 @@ h1 {
   font-size: 55px;
   font-weight: 700;
   text-transform: capitalize;
-  text-align: center;
   color: #fff;
-  margin: 0;
+  margin:0 0 0 30px;
 }
 .header-text p {
   font-size: 20px;
@@ -66,13 +81,14 @@ h1 {
 }
 
 input {
-  width: 500px;
+  width: 95%;
+  max-width: 500px;
   padding: 10px;
   border: none;
   border-radius: 17px;
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  color: grey;
+  font-size: 1rem;
+  color: #595959;
   display: block;
   margin: 20px;
 }
@@ -85,16 +101,16 @@ button {
   border: none;
   color: white;
   background-color: #000;
-  padding: 10px 20px;
+  padding: 15px 20px;
   width: 150px;
-  border-radius: 5px;
+  border-radius: 17px;
   margin-left: 25px;
 }
 
 button:hover {
   background-color: rgba(74, 39, 77, 0.967);
   border: none;
-  border-radius: 16px;
+  border-radius: 17px;
 }
 
 button:active {
@@ -130,6 +146,11 @@ section {
     rgba(231, 162, 242, 1) 100%
   );
   padding: 80px 100px 0;
+  flex: 1;
+}
+section h1, section > div {
+  max-width: 1100px;
+  margin: auto;
 }
 section h1 {
   font-size: 40px;
@@ -147,7 +168,7 @@ a {
   font-size: 16px;
   font-weight: 200;
   text-transform: uppercase;
-  padding: 10px 30px;
+  padding: 15px 30px;
 }
 .btn-git {
   color: #fff;
@@ -157,9 +178,14 @@ a {
 .btn {
   background-color: #fff;
   color: #000;
+
 }
 .btn-contact {
   color: #fff;
+}
+.btn-contact, .btn-git, .btn {
+    display: inline-block;
+    margin-bottom: 1rem;
 }
 section h2 {
   font-size: 38px;
@@ -180,13 +206,167 @@ section small {
   font-size: 12px;
   font-weight: 100;
 }
+#userData div:nth-child(2) {
+    width: 60%;
+}
 section .avatar-wrapper {
-  width: 50%;
-  height: 400px;
+   width: 40%;
   overflow: hidden;
   border-radius: 8px;
 }
 section .avatar-wrapper img {
-  width: 100%;
-  height: 100%;
+  width: 300px;
+  height: 300px;
+  max-width: 100%; /* make image scale with container*/
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/*------------ Responsive design  ------------*/
+@media screen and (min-width: 680px) {
+    .responsive-container-user {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+}
+@media screen and (max-width: 768px){
+    .responsive-container {
+        height: 100%;
+    }
+    nav {
+        padding: 18px 20px;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        padding: 0 40px;
+        height: 100%;
+    }
+    .header-text, .header-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .header-text {
+        margin: 0;
+        text-align: center;
+        padding: 0;
+    }
+    .header-image {
+        margin: 0;
+    }
+    .header-text h1 {
+        margin: 0;
+        font-size: 45px;
+    }
+    .header-text p {
+        margin: 0 0 14px 0;
+        font-size: 18px;
+    }
+    input {
+        width: 90%;
+        margin: 20px auto;
+    }
+    button {
+        display: inline-block;
+        width: 50%;
+        margin-inline: auto;
+    }
+    .header-image img {
+        width: auto;
+        height: auto;
+        margin-inline: auto ;
+    }
+    section#container {
+        padding: 60px 80px 30px;
+
+    }
+    section#container p {
+        width: 90%;
+    }
+    .btn-git {
+        margin-left: 25px;
+    }
+}
+@media screen and (max-width: 680px) {
+    section#container {
+        padding: 40px 60px 0;
+    }
+    section > div {
+        flex-direction: column;
+    }
+    section .avatar-wrapper {
+        width: auto;
+    }
+    #userData div:nth-child(2){
+        text-align: center;
+        width: 100%;
+    }
+    section#container p {
+        width: 80%;
+        margin-inline: auto;
+    }
+}
+@media screen and (max-width: 530px) {
+    .header-image img {
+        width: 30vh;
+    }
+}
+@media screen and (max-width: 425px) {
+    .header-image {
+        display: none;
+    }
+    header {
+        display: grid;
+        place-items: center;
+    }
+    .header-text {
+        padding: 0;
+    }
+    nav {
+        padding: 0 20px;
+    }
+    nav img {
+        width: 50px;
+        height: 50px;
+    }
+    nav >  ul > li {
+        font-size: 0.8rem;
+    }
+    header {
+        padding: 0 30px;
+    }
+    .header-text h1, section h1 {
+        font-size: 36px;
+    }
+    section#container {
+        padding: 40px 30px 20px;
+    }
+    section .avatar-wrapper img {
+        width: 260px;
+        height: 260px;
+        max-width: none;
+    }
+    section h2 {
+        font-size: 32px;
+    }
+    .header-text p {
+        font-size: 16px;
+    }
+    button, section#container p {
+        width: 90%;
+    }
+    section#container p {
+        font-size: 1rem;
+    }
+    .btn-contact, .btn-git, .btn {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    .btn-git  {
+        margin-left: 0;
+    }
+
 }

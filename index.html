@@ -1,55 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
-    <title>check git profile</title>
-  </head>
-  <body>
-    <nav>
-      <img
-        src="/image/oj-logo.png"
-        alt="ojays logo"
-        height="80px"
-        width="80px"
-      />
-      <ul>
-        <li>Created by Ojay</li>
-      </ul>
-    </nav>
-    <header>
-      <div class="header-text">
-        <h1>check github profile</h1>
-        <p>⚡Fast Access to millions of Github profile in seconds</p>
-        <div id="container">
-          <form
-            action="/user/index.html"
-            method="GET"
-            onsubmit="getUserData(event)"
-          >
-            <label for="username">
-              <input
-                type="search"
-                aria-label="Enter github User Name"
-                name="username"
-                id="username"
-                placeholder="Enter github user name..."
-                autofocus
-              />
-              <button id="search-button" type="submit">
-                <span id="button-text">Search</span>
-                <span id="spinner" class="spinner"></span>
-                </button>
-            </label>
-          </form>
-        </div>
-      </div>
-      <div class="header-image">
-        <img src="/image/github.png" alt="github logo" />
-      </div>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/style.css" />
+		<title>check git profile</title>
+	</head>
+	<body>
+		<div class="responsive-container">
+			<nav>
+                <a href="./index.html">
+                    <img
+					src="/image/oj-logo.png"
+					alt="ojays logo"
+					height="80px"
+					width="80px" />
+                </a>
 
-    <script src="/main.js"></script>
-  </body>
+				<ul>
+					<li>Created by Ojay</li>
+				</ul>
+			</nav>
+			<header>
+				<div class="header-text">
+					<h1>check github profile</h1>
+					<p>
+						⚡Fast Access to millions of Github profile
+						in seconds
+					</p>
+					<div id="container">
+						<form
+							action="/user/index.html"
+							method="GET"
+							onsubmit="getUserData(event)">
+							<label for="username">
+								<input
+									type="search"
+									aria-label="Enter github User Name"
+									name="username"
+									id="username"
+									placeholder="Enter github user name..."
+									autofocus
+                                    autocomplete="username" />
+								<button
+									id="search-button"
+									type="submit">
+									<span id="button-text"
+										>Search</span
+									>
+									<span
+										id="spinner"
+										class="spinner"></span>
+								</button>
+							</label>
+						</form>
+					</div>
+				</div>
+				<div class="header-image">
+					<img
+						src="/image/github.png"
+						srcset="
+							/image/github-small.png 300w,
+							/image/github.png 585w
+						"
+						sizes="(min-width: 426px) 300px, (min-width: 600px) 585px"
+						alt="github logo" />
+				</div>
+			</header>
+		</div>
+		<script src="/main.js"></script>
+	</body>
 </html>
