@@ -7,8 +7,12 @@
     <title>user</title>
 </head>
 <body>
+    <div class="responsive-container-user">
     <nav>
-        <img src="/image/oj-logo.png" alt="ojays logo" height="80px" width="80px">
+        <a href="../index.html">
+            <img src="/image/oj-logo.png" alt="ojays logo" height="80px" width="80px">
+        </a>
+
         <ul>
             <li>Created by Ojay</li>
         </ul>
@@ -20,6 +24,7 @@
         </div>
 
     </section>
+   </div>
     <script>
         // retrieve data from URL parameters or storage
         const urlParams = new URLSearchParams(window.location.search);
@@ -34,14 +39,13 @@
                 <h2>${data.name} </h2>
                 <small>${data.location}</small>
                 <p>${data.bio} </p>
-                <a href= ${data.blog} class="btn">Portfolio</a>
+                <a href="${data.blog}" class="btn">Portfolio</a>
                 <a href="${data.html_url}" class="btn-git">github</a>
                 <a href="mailto:${data.email}" class="btn-contact ">Contact&rarr;</a>
-                
+
             </div>
         `;
     </script>
-
 
 </body>
 </html>
