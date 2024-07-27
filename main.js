@@ -9,15 +9,21 @@ function getUserData(event) {
   fetch(url)
     .then((response) => {
       if (!response.ok) {
-        throw new Error("an error occured");
+        //redirect the user to 404 page
+        window.location.href = `404.html`;
       }
       return response.json();
     })
     .then((data) => {
+      if(data.name == null){
+        //the name is a required field for github users, redirect to 404 page if null
+        window.location.href = `404.html`;
+      }else{
       let queryParams = new URLSearchParams();
       queryParams.append("userName", userName);
       queryParams.append("data", JSON.stringify(data));
       window.location.href = `user/index.html?${queryParams.toString()}`;
+      }
     })
     .catch((error) => {
       console.error("Error fetching data:", error);
